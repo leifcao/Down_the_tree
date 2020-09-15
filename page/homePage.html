@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font/iconfont.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 渲染头部标签 -->
+    <cus-header></cus-header>
+
+    <div class="main">
+        <div class="left">
+            <ul class="menuTrees level1">
+            </ul>
+        </div>
+        <div class="right">
+            <div class="homePage_banner">
+                <div class="">
+                    <h2>初识别啥啥啥</h2>
+                    <p>测试文字效果</p>
+                    <p>再来一行的效果</p>
+                </div>
+                <img src="../img/mc_banner.png" alt="">
+            </div>
+
+            <div class="homePage_main">
+                <h1>学习路径</h1>
+                <span>有0到1,带你进去MC的世界</span>
+                <div class="homePage_box first">
+                    <div class="box_title about">关于铭诚</div>
+                    <div class="box_content">
+                        <ul>
+                            <li><a href="#">产品介绍</a></li>
+                            <li><a href="#">使用场景</a></li>
+                            <li><a href="#">功能概述</a></li>
+                            <li><a href="#">产品优势</a></li>
+                            <li><a href="#">购买</a></li>
+                            <li><a href="#">免费下载使用</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="homePage_box">
+                    <div class="box_title start">快速入门
+                        <a href="#" style="font-size: 0;position: absolute;left: 75px;top: 5px;">
+                            <img src="../img/play.png" alt="" width="16">
+                        </a>
+                    </div>
+                    <div class="box_content">
+                        <ul>
+                            <li><a href="#">产品介绍</a></li>
+                            <li><a href="#">使用场景</a></li>
+                            <li><a href="#">功能概述</a></li>
+                            <li><a href="#">产品优势</a></li>
+                            <li><a href="#">购买</a></li>
+                            <li><a href="#">免费下载使用</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="homePage_box">
+                    <div class="box_title advanced">进阶操作</div>
+                    <div class="box_content">
+                        <ul>
+                            <li><a href="#">产品介绍</a></li>
+                            <li><a href="#">使用场景</a></li>
+                            <li><a href="#">功能概述</a></li>
+                            <li><a href="#">产品优势</a></li>
+                            <li><a href="#">购买</a></li>
+                            <li><a href="#">免费下载使用</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="homePage_box">
+                    <div class="box_title developers">开发者资源</div>
+                    <div class="box_content">
+                        <ul>
+                            <li><a href="#">产品介绍</a></li>
+                            <li><a href="#">使用场景</a></li>
+                            <li><a href="#">功能概述</a></li>
+                            <li><a href="#">产品优势</a></li>
+                            <li><a href="#">购买</a></li>
+                            <li><a href="#">免费下载使用</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="homePage_box">
+                    <div class="box_title question">遇到问题</div>
+                    <div class="box_content last">
+                        <ul>
+                            <li><a href="#">产品介绍</a></li>
+                            <li><a href="#">使用场景</a></li>
+                            <li><a href="#">功能概述</a></li>
+                            <li class="mysupport">技术支持联系方式<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ：201093791<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：020-3846-9807</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let object = {
+            中秋节: {
+                月饼: [{
+                    name: '吃',
+                    href: '#'
+                }, {
+                    name: '喝',
+                    href: '#'
+                }],
+                嫦娥: [{
+                    name: '八戒',
+                    href: '#',
+                }, {
+                    name: '天蓬元帅',
+                    href: '#'
+                }],
+                事件: {
+                    打印: [{
+                        name: '现在打印',
+                        href: '#',
+                    }]
+                },
+                下钻: {
+                    下钻4_1: {
+                        下钻5_1: {
+                            下钻结束: [{
+                                name: '51',
+                                href: '#'
+                            }]
+                        },
+                        下钻5_2: {
+                            下钻结束2: [{
+                                name: '52',
+                                href: '#'
+                            }]
+                        }
+
+                    },
+                    下钻4_2: {
+                        下钻5_2: {
+                            下钻结束3: [{
+                                name: '53',
+                                href: '#'
+                            }]
+                        }
+
+                    }
+                }
+            },
+            国庆节: {
+                放假: [{
+                    name: '八戒',
+                    href: '#',
+                }, {
+                    name: '天蓬元帅',
+                    href: '#'
+                }],
+                // 加班: '#'
+            },
+            清明节: {
+                扫墓: [{
+                    name: '出行',
+                    href: '#',
+                }, {
+                    name: '回家',
+                    href: '#'
+                }],
+                烧香: '#'
+            },
+            过年: [{
+                name: '红包',
+                href: '#',
+            }],
+            高级教程: '#',
+        }
+
+
+        //获取dom添加的位置 
+        var preLevel_li = $('.left');
+
+        // 重构方法面向对象
+        function treeRender(obj, preLevel_li) {
+            var level = $(`<ul class="level"></ul>`);
+            for (var key in obj) {
+                if (typeof obj[key] === 'string') {
+                    let curlevel_li2 = createDom(obj, key, level, preLevel_li);
+                    continue;
+                }
+                if (typeof obj[key] === 'object') {
+                    let curlevel_li = createDom(obj, key, level, preLevel_li);
+                    if (obj[key] instanceof Array) {
+                        // 数组渲染
+                        let level_list = $(`<ul class="level"></ul>`);
+                        arrayRender(obj[key], level_list, curlevel_li);
+                    } else {
+                        // 对象渲染
+                        treeRender(obj[key], curlevel_li);
+                    }
+                }
+            }
+
+        }
+
+        treeRender(object, preLevel_li)
+
+
+        // 树形是对象的渲染方式 创建ul-li DOM
+        function createDom(obj, key, curLevel, preLevel_li) {
+            let href = typeof obj[key] == 'string' ? obj[key] : '#';
+            // 对图片做处理
+            let src = typeof obj[key] == 'string' ? '' : '../img/arrow-right.svg';
+            // 创建当前级别的li
+            let level_li = src == '' ? $(`<li><a href="${href}">${key}</a></li>`) : $(`<li><img src="${src}"><a href="${href}">${key}</a></li>`);
+
+            // 将当前级别的li添加到当前级别的ul中
+            curLevel.append(level_li);
+            // 将当前级别的ul添加至上一级的Ul的li后边
+            preLevel_li.append(curLevel);
+
+            return level_li;
+        }
+
+        // 树形是数组的渲染方式 创建ul-li DOM
+        function arrayRender(arr, curLevel, preLevel_li) {
+            arr.forEach((item, index) => {
+                let level_li = $(`<li><a href="${item.href}">${item.name}</a></li>`);
+                // 将当前级别的li添加到当前级别的ul中
+                curLevel.append(level_li);
+                // 将当前级别的ul添加至上一级的Ul的li后边
+                preLevel_li.append(curLevel);
+            })
+        }
+
+        let oldTag;
+        // 动态绑定事件
+        $('.left ul li').each(function() {
+            // 默认关闭
+            let open = false;
+            $(this).click((e) => {
+                open = !open;
+                $(this).children('ul').toggle(500);
+                if (oldTag) oldTag.removeClass('level_active')
+                    // 图片icon切换
+                $(this).children('img').attr('src', open ? '../img/arrow-down.svg' : '../img/arrow-right.svg');
+
+                $(this).children('a').addClass('level_active');
+                oldTag = $(this).children('a');
+                // 取消冒泡
+                //如果提供了事件对象，则这是一个非IE浏览器
+                if (e && e.stopPropagation)　　 // 因此它支持W3C的stopPropagation()方法
+                    e.stopPropagation();
+                else　　 //否则，我们需要使用IE的方式来取消事件冒泡
+                    window.event.cancelBubble = true;
+                return false;
+            })
+        });
+    </script>
+</body>
+
+</html>

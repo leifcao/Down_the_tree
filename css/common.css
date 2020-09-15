@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+head,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 导航栏 */
+
+.header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(29, 29, 31, .1);
+}
+
+.header .logo {
+    width: 160px;
+    margin-left: 30px;
+    float: left;
+    height: inherit;
+}
+
+.header .logo a {
+    height: inherit;
+    display: inline-block;
+}
+
+.header .logo a img {
+    width: 160px;
+    height: inherit;
+}
+
+.header .menu {
+    float: left;
+    height: inherit;
+}
+
+.header .menu ul {
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    justify-content: center;
+}
+
+.header .menu .submenu {
+    color: #344355;
+    text-align: center;
+    margin-left: 40px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.header .menu .submenu a {
+    color: #344355;
+}
+
+.header .menu .submenu a:hover {
+    color: #1C85E7;
+}
+
+.header .menu .submenu.active {
+    border-bottom: 2px solid #1C85E7;
+}
+
+
+/* 主要模块代码 */
+
+.main {
+    padding-top: 60px;
+    height: calc(100% - 60px);
+}
+
+
+/* 左边模块代码 */
+
+.left {
+    float: left;
+    width: 280px;
+    height: calc(100% - 20px);
+    background-color: #f7f9fd;
+    overflow: auto;
+    padding-top: 20px;
+}
+
+
+/* 右边页面代码 */
+
+.right {
+    float: left;
+    height: 100%;
+    overflow: auto;
+    width: calc(100% - 280px);
+}
+
+
+/* 头部banner */
+
+.right .homePage_banner {
+    width: 800px;
+    display: flex;
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px #d8d8d8;
+}
+
+.right .homePage_banner div {
+    width: calc(100% - 300px);
+    letter-spacing: 1px;
+}
+
+.right .homePage_banner div>h2 {
+    display: block;
+    font-size: 23px;
+    font-weight: normal;
+    color: #334356;
+}
+
+.right .homePage_banner div>p {
+    position: relative;
+    font-size: 14px;
+    color: #617288;
+    padding-top: 12px;
+}
+
+.right .homePage_banner img {
+    width: 270px;
+    margin-left: 30px;
+    height: inherit;
+}
+
+
+/* 主页面学习路径 */
+
+.right .homePage_main {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 845px;
+}
+
+.right .homePage_main>h1 {
+    font-size: 17px;
+    color: #334356;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 3px;
+}
+
+.right .homePage_main>span {
+    font-size: 14px;
+    color: #B3C1D3;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.right .homePage_main {}
+
+.right .homePage_main .homePage_box.first {
+    margin-top: 30px;
+}
+
+.right .homePage_main .homePage_box .last {
+    border-left: none;
+}
+
+.homePage_box .box_title {
+    margin-left: 34px;
+    border-bottom: 1px solid #ECF0F5;
+    font-size: 17px;
+    color: #334356;
+    line-height: 24px;
+    position: relative;
+}
+
+.homePage_box .box_title::before {
+    width: 24px;
+    height: 24px;
+    content: '';
+    top: 0;
+    left: -34px;
+    display: inline-block;
+    position: absolute;
+}
+
+.homePage_box .about::before {
+    background: url(../img/about.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+.homePage_box .start::before {
+    background: url(../img/start.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+.homePage_box .advanced::before {
+    background: url(../img/advanced.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+.homePage_box .developers::before {
+    background: url(../img/developers.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+.homePage_box .question::before {
+    background: url(../img/question.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+.homePage_box .box_content {
+    margin-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 50px;
+    border-left: 1px solid #D2DBE7;
+}
+
+.homePage_box .box_content ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homePage_box .box_content ul li {
+    font-size: 14px;
+    color: #1C85E7;
+    line-height: 20px;
+    padding-left: 35px;
+    padding-top: 12px;
+    list-style: inside;
+    width: 25%;
+}
+
+.homePage_box .box_content ul li>a {
+    color: inherit;
+}
+
+.homePage_box .box_content ul li>a:hover {
+    text-decoration: underline;
+}
+
+.homePage_box .box_content ul li.mysupport {
+    color: #617288!important;
+}
+
+
+/* 滚动条样式 */
+
+.left::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.left::-webkit-scrollbar-track,
+.right::-webkit-scrollbar-track {
+    /* background: rgb(201, 201, 201); */
+    background: '';
+    border-radius: 2px;
+}
+
+.left::-webkit-scrollbar-thumb,
+.right::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 10px;
+}
+
+
+/* .left::-webkit-scrollbar-thumb:hover,
+.right::-webkit-scrollbar-thumb:hover {
+    background: #f8f8f8;
+    color: #333233;
+} */
+
+.left::-webkit-scrollbar-corner,
+.right::-webkit-scrollbar-corner {
+    background: #434b43;
+}
+
+
+/* 树桩下拉 */
+
+.left .level a {
+    color: #334356;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+.left .level a:hover {
+    background: #d8e9fd;
+    color: #1C85E7;
+}
+
+
+/* 高亮菜单 */
+
+.level_active {
+    background: #d8e9fd;
+    color: #1C85E7;
+}
+
+.menuTree .left .level li {
+    position: relative;
+    /* height: 30px;
+    line-height: 30px; */
+}
+
+.left .level li {
+    position: relative;
+}
+
+.left .level li img {
+    position: absolute;
+    width: 13px;
+    left: 10px;
+    top: 10px;
+}
+
+.left .level li>ul {
+    display: none;
+}
+
+.left .level li>ul>li>img {
+    left: 29px;
+}
+
+.left .level li>ul>li>ul>li>img {
+    left: 46px;
+}
+
+.left .level li>ul>li>ul>li>ul>li>img {
+    left: 64px;
+}
+
+.left .level li>ul>li>ul>li>ul>li>ul>li>img {
+    left: 78px;
+}
+
+
+/*第一层 */
+
+.left .level li {
+    text-indent: 27px;
+}
+
+
+/*第二层 */
+
+.left .level li>ul>li {
+    text-indent: 45px;
+}
+
+
+/*第三层 */
+
+.left .level li>ul>li>ul>li {
+    text-indent: 62px;
+}
+
+
+/* 第四层 */
+
+.left .level li>ul>li>ul>li>ul>li {
+    text-indent: 78px;
+}
+
+
+/* 第五层 */
+
+.left .level li>ul>li>ul>li>ul>li>ul>li {
+    text-indent: 94px;
+}
+
+
+/* 第六层 */
+
+.left .level li>ul>li>ul>li>ul>li>ul>li>ul>li {
+    text-indent: 110px;
+}
