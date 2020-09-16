@@ -334,28 +334,12 @@ body {
 .left .level li img {
     position: absolute;
     width: 13px;
-    left: 10px;
+    margin-left: -16px;
     top: 10px;
 }
 
 .left .level li>ul {
     display: none;
-}
-
-.left .level li>ul>li>img {
-    left: 29px;
-}
-
-.left .level li>ul>li>ul>li>img {
-    left: 46px;
-}
-
-.left .level li>ul>li>ul>li>ul>li>img {
-    left: 64px;
-}
-
-.left .level li>ul>li>ul>li>ul>li>ul>li>img {
-    left: 78px;
 }
 
 
