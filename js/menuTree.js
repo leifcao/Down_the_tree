@@ -58,6 +58,7 @@ function tree(obj, pre_li) {
     let curLevel_ul = $(`<ul class="level"></ul>`);
 
     obj.forEach((item, index) => {
+
         if (item.children.length === 0) {
             lastTreeRender(item, preLevel_li, curLevel_ul);
         } else {
@@ -71,8 +72,7 @@ tree(menuObject, preLevel_li)
 
 // 子集菜单树
 function treeRender(item, preLevel_li, curLevel_ul) {
-    console.log(item)
-    let level_li = $(`<li><img src="../img/arrow-right.svg"><a href="${item.href}">${item.name}</a></li>`);
+    let level_li = $(`<li><div><img src="../img/arrow-right.svg"><a href="${item.href}">${item.name}</a></div></li>`);
     // 将当前级别的li添加到当前级别的ul中
     curLevel_ul.append(level_li);
     // 将当前级别的ul添加至上一级的Ul的li后边
@@ -84,7 +84,7 @@ function treeRender(item, preLevel_li, curLevel_ul) {
 // 最后的无子菜单的节点
 function lastTreeRender(item, preLevel_li, curLevel_ul) {
     // var preLevel_li = $('.left');
-    let level_li = $(`<li><a href="${item.href}">${item.name}</a></li>`);
+    let level_li = $(`<li><div><a href="${item.href}">${item.name}</a></div></li>`);
     // 将当前级别的li添加到当前级别的ul中
     curLevel_ul.append(level_li);
     // 将当前级别的ul添加至上一级的Ul的li后边
@@ -103,10 +103,10 @@ $('.left ul li').each(function() {
         $(this).children('ul').toggle(500);
         if (oldTag) oldTag.removeClass('level_active')
             // 图片icon切换
-        $(this).children('img').attr('src', open ? '../img/arrow-down.svg' : '../img/arrow-right.svg');
+        $(this).children('div').children('img').attr('src', open ? '../img/arrow-down.svg' : '../img/arrow-right.svg');
 
-        $(this).children('a').addClass('level_active');
-        oldTag = $(this).children('a');
+        $(this).children('div').children('a').addClass('level_active');
+        oldTag = $(this).children('div').children('a');
         // 取消冒泡
         //如果提供了事件对象，则这是一个非IE浏览器
         if (e && e.stopPropagation)　　 // 因此它支持W3C的stopPropagation()方法
@@ -115,4 +115,7 @@ $('.left ul li').each(function() {
             window.event.cancelBubble = true;
         return false;
     })
+
+
+
 });
